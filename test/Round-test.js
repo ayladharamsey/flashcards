@@ -5,6 +5,8 @@ const Round = require('../src/Round');
 const Card = require('../src/Card')
 const Deck = require('../src/Deck');
 const Turn = require('../src/Turn');
+const Game = require('../src/Game');
+
 
 
 
@@ -79,12 +81,10 @@ describe('Round', function() {
     const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
-
-    round.takeTurn('capybara')
-    round.takeTurn('appendix')
-    round.takeTurn('playing with bubble wrap')
-
-    expect(round.endRound()).to.equal()
+    const game = new Game(round)
+    
+    round.endRound();
+    game.currentRound(1)
   });
 
 });
