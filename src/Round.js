@@ -32,9 +32,11 @@ class Round {
 
   endRound() {
     this.roundCounter++
-    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     
-    if (this.calculatePercentCorrect() < 85) {
+    if (this.calculatePercentCorrect() > 85) {
+      console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    } else {
+      console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly! Try again for a better score.`);
       this.game.start()
     }
 
