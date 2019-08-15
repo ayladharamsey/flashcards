@@ -10,8 +10,6 @@ class Game {
     this.currentCards = [];
     this.currentRound;
     this.currentDeck;
-
-
   }
 
   printMessage(deck, round) {
@@ -26,7 +24,7 @@ class Game {
   start() {
     this.currentCards = prototypeQuestions.map(card => new Card(card.id, card.question, card.answers, card.correctAnswer))
     this.currentDeck = new Deck(this.currentCards);
-    this.currentRound = new Round(this.currentDeck);
+    this.currentRound = new Round(this.currentDeck, this);
     this.printMessage(this.currentDeck, this.currentRound);
     this.printQuestion(this.currentRound)
   }
