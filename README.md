@@ -37,5 +37,5 @@ node index.js
 ```
 
 ## Gameplay
-![flash cards example gif](https://github.com/ayladharamsey/flashcards/blob/master/example.gif.sb-8e39b78b-cgjQbG)
+![flash cards example gif](https://github.com/ayladharamsey/flashcards/blob/master/Aug-16-2019%2007-55-23.gif.sb-8e39b78b-bfGOQY)
 
